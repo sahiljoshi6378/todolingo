@@ -1,0 +1,29 @@
+# Ignoring node_modules folder
+node_modules
+
+
+
+# ignoring files folder
+files
+
+# Ignoring .gitignore itself
+
+
+
+
+# binaries
+bin/
+dist/
+lib/
+
+# editors
+*.swp
+.idea/
+.vs/
+.vscode/
+.DS_Store
+
+
+build
+
+# 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
