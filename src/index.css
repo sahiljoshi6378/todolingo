@@ -4,14 +4,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    
 }
 
 
 html{
     font-size:  18px;
+    
 }
 
 body{
     height: 100vh;
-    font-family:'Josefin Sans', sans-serif;;
+    font-family:'Josefin Sans', sans-serif;
 }

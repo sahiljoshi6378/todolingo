@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import svgSun from "../images/icon-sun.svg";
 import svgMoon from "../images/icon-moon.svg";
@@ -7,15 +7,42 @@ import svgMoon from "../images/icon-moon.svg";
 
 // Navbar component
 const Navbar = () =>{
+    const [theme,setTheme] = useState();
     // theme switcher
-    const switchTheme = (e) =>{
-        
+    const switchTheme = () =>{
+        if(!localStorage.getItem('theme')){
+            localStorage.setItem('theme','dark');
+            themeSwticher();
+        }
+        else if(localStorage.getItem('theme') === 'light'){
+            localStorage.setItem('theme','dark');
+            themeSwticher();
+        }else if(localStorage.getItem('theme') === 'dark'){
+            localStorage.setItem('theme','light');
+            themeSwticher();
+        }
     }
+  
+    const themeSwticher = () =>{
+        if(localStorage.getItem('theme') === 'light'){
+            document.body.className = 'theme-light';
+            setTheme('light');
+        }
+        else if(localStorage.getItem('theme') === 'dark'){
+            document.body.className = 'theme-dark'
+            setTheme('dark');
+        }
+    }
+
+    useEffect(() =>{
+        themeSwticher();
+    },[]);
+  
     return(
         <>
         <header className="navbar__header__outer">
             <h1 id="logo">TODO</h1>
-            <img className="navbar__svg" onClick={switchTheme} src={svgMoon} />
+            <img className="navbar__svg" onClick={switchTheme} src={theme ===  'dark' ? svgMoon : svgSun } />
         </header>
         </>
     )
