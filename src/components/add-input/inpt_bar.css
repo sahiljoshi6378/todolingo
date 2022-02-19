@@ -1,0 +1,24 @@
+@import '../../styles//root-css.css';
+
+.inptbar__srch__outer{
+    width: min(500px,90%);
+    margin: 0 auto;
+    border-radius: 0.20rem;
+    height: 2.8rem;
+    background-color: var(--very-dark-desaturated-blue);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+input{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 0.20rem;
+    height: 100%;
+    padding: 0.5rem 0.8rem;
+    font-family: var(--font-family);
+    font-size:0.8rem;
+    background-color: var(--inpt-bg-clr);
+    color: var(--inpt-txt-clr);
+    font-weight: 700;
+}
