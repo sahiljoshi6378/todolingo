@@ -1,0 +1,360 @@
+/* light mode color palete */
+.theme-light{
+    --bottom-area-clr: hsl(0, 0%, 98%);
+    --input-bg-clr:  hsl(236, 33%, 92%);
+    --list-containor-bg-clr:  hsl(236, 33%, 92%);
+    --inpt-txt-clr:hsl(236, 9%, 61%);
+    --done-todo-txt-clr: hsl(236, 9%, 61%);
+    --active-todo-txt-clr : hsl(235, 19%, 35%);
+    --border-clr :hsl(233, 11%, 84%);
+    --action-txt-clr : hsl(236, 9%, 61%);
+    --check-background : linear-gradient(to right,#57ddff, #c058f3);
+    --box-shadow : rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+
+/* Dark mode color palate */
+.theme-dark{
+    --bottom-area-clr: hsl(235, 21%, 11%);
+    --input-bg-clr:hsl(235, 24%, 19%);
+    --list-containor-bg-clr:hsl(235, 24%, 19%);
+    --inpt-txt-clr: hsl(234, 11%, 52%);
+    --done-todo-txt-clr: hsl(237, 14%, 26%);
+    --active-todo-txt-clr :  hsl(236, 33%, 92%);
+    --border-clr : hsl(237, 14%, 26%);
+    --action-txt-clr : hsl(234, 11%, 52%);
+    --check-background : linear-gradient(to right,#57ddff, #c058f3);
+    --box-shadow : rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+
+
+
+/* home page sestion part css [START] */
+
+
+.home__top__area{
+    height: 35vh;
+    min-height: 35vh;
+    max-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.home__bottom__area{
+    height: 65vh;
+    min-height: 65vh;
+    max-height: 65vh;
+    background-color: var(--bottom-area-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    
+}
+
+
+
+
+.mobile__filter__actions__outer{
+    background-color: var(--list-containor-bg-clr);
+    width: min(500px,90%);
+    height: 2.5rem;
+    border-radius: 0.10rem;
+    box-shadow: var(--box-shahow);
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 4rem;
+    justify-content: space-around;
+    display: none;
+}
+
+.home__sub_info{
+    color: var(--inpt-txt-clr);
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+
+/* home page sestion part css [END] */
+
+
+
+
+
+
+
+
+
+/* Nabar css [START] */
+.navbar__header__outer{
+    width: min(500px,90%);
+    margin: 2.5rem auto 1.2rem auto;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+#logo{
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+}
+
+.navbar__svg{
+    width: 1rem;
+    cursor: pointer;
+}
+
+/* Nabar css [END] */
+
+
+
+
+
+
+/* InputBar css [START] */
+.inptbar__srch__outer{
+    width: min(500px,90%);
+    margin: 0 auto;
+    border-radius: 0.20rem;
+    height: 2.8rem;
+    box-shadow: var(--box-shadow); 
+}
+
+
+.inptbar__srch__outer ::placeholder{
+    color: var(--inpt-txt-clr);
+}
+
+input{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 0.20rem;
+    height: 100%;
+    padding: 0.5rem 0.8rem;
+    font-family: var(--font-family);
+    font-size:0.8rem;
+    background-color: var(--input-bg-clr);
+    color: var(--active-todo-txt-clr);
+    font-weight: 400;
+}
+
+/* InputBar css [END] */
+
+
+
+/* ListContainor css [START] */
+.listcontainor__outer{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--list-containor-bg-clr);
+    width: min(500px,90%);
+    height: min(800px,80%);
+    border-radius: 0.10rem;
+    box-shadow: var(--box-shadow);
+}
+
+
+.listcontainor__inner__todos{
+    width: 100%;
+    height: 85%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+
+.listcontainor__inner__stat{
+    width: 100%;
+    height: 15%;
+    padding: 0.5rem ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+
+
+
+
+
+.filter__actions{
+    display: none;
+}
+
+
+
+
+.filter__actions .action:nth-child(1){
+    margin-left: 1.3rem;
+}
+
+.filter__actions .action:nth-child(2){
+    margin-left: 0.5rem;
+}
+
+.filter__actions .action:nth-child(3){
+    margin-left: 0.5rem;
+}
+
+
+
+.stat_txt{
+    font-size: 0.8rem;
+    color: var(--action-txt-clr);
+}
+
+
+.todo{
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    position: relative;
+}
+
+
+
+
+.todo::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--border-clr);
+}
+
+
+
+.status__outer{
+    width: 1.1rem;
+    height: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid var(--border-clr);
+    border-radius: 50%;
+    position: relative;
+    margin-right: 0.8rem;
+    cursor: pointer;
+}
+
+
+
+
+.status__outer::before{
+    content: url("./images/icon-check.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+
+
+
+.todo_text{
+    color: var(--active-todo-txt-clr);
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+
+
+.remove_icon{
+    width: 0.8rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
+
+/* styling when todo is done */
+
+.todo.done > .todo_text{
+    color: var(--done-todo-txt-clr);
+    font-weight:400;
+    text-decoration: line-through;
+}
+
+
+.todo.done >  .status__outer{
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--check-background);
+    border-radius: 50%;
+    position: relative;
+}
+
+
+.todo.done >  .status__outer::before{
+    display: inline;
+}
+
+
+
+
+
+/* scrollbar css */
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+    display: none;
+  }
+ 
+
+/* ListContainor css [END] */
+
+
+
+
+
+
+
+/* Media quarie(s) [START] */
+@media screen and (max-width: 480px) {
+    .mobile__filter__actions__outer{
+        display: flex;
+    }
+
+}
+
+
+
+@media screen and (min-width: 480px) {
+    .filter__actions{
+        display: flex;
+    }
+
+}
+
+/* Media quarie(s) [END] */

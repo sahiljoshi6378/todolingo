@@ -1,5 +1,5 @@
 import React from "react";
-import "./inpt_bar.css"
+
 
 
 // input-bar component

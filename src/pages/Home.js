@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import '../styles/Home.css';
+
 import bgImgDark from   "../images/bg-desktop-light.jpg";
 import bgImgLight from   "../images/bg-desktop-dark.jpg";
 
 
 // importing components
-import Navbar from "../components/navbar/Navbar";
-import InputBar from "../components/add-input/InputBar";
-import TodoListContainor from "../components/TodoListContainor/TodoListContainor";
+import Navbar from "../components/Navbar";
+import InputBar from "../components/InputBar";
+import TodoListContainor from "../components/TodoListContainor";
 
 // Home component
 const Home = () =>{
@@ -27,6 +27,11 @@ const Home = () =>{
             </div>
             <div className="home__bottom__area">
                 <TodoListContainor/>
+                <div className="mobile__filter__actions__outer">
+                    <p className="stat_txt action filter__action__all">All</p>
+                    <p className="stat_txt action filter__action__active">Active</p>
+                    <p className="stat_txt action filter__action__completed">Completed</p>
+                </div>
                 <p className="home__sub_info">Drag and drop to reorder list.</p>
             </div>
         </>

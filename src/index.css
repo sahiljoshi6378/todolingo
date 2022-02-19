@@ -1,4 +1,4 @@
-@import "./styles//root-css.css";
+@import "./root-css.css";
 
 *{
     margin: 0;
@@ -13,5 +13,5 @@ html{
 
 body{
     height: 100vh;
-    font-family: var(--font-family);
+    font-family:'Josefin Sans', sans-serif;;
 }
