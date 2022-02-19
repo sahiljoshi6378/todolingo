@@ -1,12 +1,10 @@
 import React from "react";
-
+import Home from "./pages/Home";
 
 // App component
 const App = () =>{
     return (
-        <>
-            <h1>Hello world</h1>
-        </>
+        <Home/>
     )
 }
 
