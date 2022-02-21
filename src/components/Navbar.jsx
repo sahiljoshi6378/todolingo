@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import svgSun from "../images/icon-sun.svg";
 import svgMoon from "../images/icon-moon.svg";
 
 
 
+import {TodoContext} from "../context";
+
+
 // Navbar component
 const Navbar = () =>{
-    const [theme,setTheme] = useState();
+   
+    const [[todosList,setTodosList],[theme,setTheme]] = useContext(TodoContext)
+ 
     // theme switcher
     const switchTheme = () =>{
         if(!localStorage.getItem('theme')){

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Home from "./pages/Home";
+import { TodoProvider } from "./context";
 
 // App component
 const App = () =>{
+    
     return (
-        <Home/>
+        <TodoProvider>
+            <Home/>
+        </TodoProvider>  
     )
 }
 
