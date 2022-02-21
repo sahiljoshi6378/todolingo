@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/todolingo/static/css/main.71e3919a.css",
+    "main.js": "/todolingo/static/js/main.f48b3f47.js",
+    "static/media/nothing-here.svg": "/todolingo/static/media/nothing-here.dc59b9f0853a62e50621928cf46a1a4a.svg",
+    "static/media/bg-desktop-light.jpg": "/todolingo/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/todolingo/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "index.html": "/todolingo/index.html",
+    "static/media/icon-sun.svg": "/todolingo/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
+    "static/media/icon-moon.svg": "/todolingo/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
+    "static/media/icon-cross.svg": "/todolingo/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
+    "static/media/icon-check.svg": "/todolingo/static/media/icon-check.a8fb15d0278c8e312df5.svg",
+    "main.71e3919a.css.map": "/todolingo/static/css/main.71e3919a.css.map",
+    "main.f48b3f47.js.map": "/todolingo/static/js/main.f48b3f47.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71e3919a.css",
+    "static/js/main.f48b3f47.js"
+  ]
+}
