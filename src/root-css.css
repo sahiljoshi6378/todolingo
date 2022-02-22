@@ -13,6 +13,12 @@
     --bright-blue: hsl(220, 98%, 61%);
     --check-background : linear-gradient(to right,#57ddff, #c058f3);
     --box-shadow : rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    --first-span-txt-clr : black ;
+    --second-span-txt-clr : #158F64;
+    --sub-txt-clr : #3B3C40;
+    --btn-txt-clr : white;
+    --btn-bg-clr : black;
+
 }
 
 
@@ -32,6 +38,13 @@
     --bright-blue: hsl(220, 98%, 61%);
     --check-background : linear-gradient(to right,#57ddff, #c058f3);
     --box-shadow : rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    --first-span-txt-clr : white;
+    --second-span-txt-clr :#7AFFD0;
+    --sub-txt-clr :#888BA3;
+    --btn-txt-clr : black;
+    --btn-bg-clr : white;
+
+
 }
 
 
@@ -177,6 +190,18 @@ input{
     box-shadow: var(--box-shadow);
 }
 
+
+.login__outer{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--list-containor-bg-clr);
+    width: min(500px,90%);
+    height: min(800px,80%);
+    border-radius: 0.10rem;
+    box-shadow: var(--box-shadow);
+}
 
 .listcontainor__inner__todos{
     width: 100%;
@@ -408,6 +433,91 @@ input{
 
 
 
+
+
+/* Media quarie(s) [END] */
+
+.login__btn__stack{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+
+
+
+.login-png{
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.login_txt{
+    font-weight: 700;
+    color: var(--first-span-txt-clr);
+    font-size: 1.4rem;
+    margin-bottom: 0.1rem;
+}
+
+.login_txt span:nth-child(2){
+    color: var(--second-span-txt-clr);
+}
+
+.login_sub_txt{
+    color:var(--sub-txt-clr);
+    font-size: 0.8rem;
+}
+
+
+
+.auth__btb{
+    font-weight: 700;
+    color: var(--btn-txt-clr);
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    background-color: var(--btn-bg-clr);
+    display: flex;
+    align-items: center;
+    padding: 0.6rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    margin: 0.4rem 0;
+   
+}
+
+
+#login_with_github{
+    padding: 0.6rem 0.7rem;
+}
+
+.auth__btb:hover{
+    background-color: #ffffffcb;
+}
+
+.login__outer{
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    
+}
+
+.login__bg{
+    position: absolute;
+    width: 18rem;
+    bottom: -5px;
+    right: -15px;
+    z-index: -2;
+}
+
+img#login_with_github_img[data-theme = "light"]{
+    content: url("./images/github-light.png");
+}
+
+
 /* Media quarie(s) [START] */
 @media screen and (max-width: 480px) {
     .mobile__filter__actions__outer{
@@ -417,6 +527,29 @@ input{
         font-size: 0.7rem;
         text-align: left;
     }
+    #login_bg{
+        width: 8.5rem;
+        top:85px;
+        left: 50px;
+        z-index: -1;
+    }
+    img#login_bg[data-theme = "dark"] {
+        content: url("./images/dark-login-mobile.svg");
+
+    }
+    img#login_bg[data-theme = "light"] {
+        content: url("./images/light-login-mobile.svg");
+    }
+  
+    .login__btn__stack{
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .auth__btb{
+        width: 100%;
+        margin: 0.3rem 0;
+    }
+    
 
 }
 
@@ -428,5 +561,3 @@ input{
     }
 
 }
-
-/* Media quarie(s) [END] */

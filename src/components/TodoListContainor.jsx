@@ -1,7 +1,7 @@
 import React, {  useContext, useEffect} from "react";
 
 import { TodoContext } from "../context";
-import {fetchTodos} from "../utils";
+import fetchTodos from "../utils";
 
 
 
@@ -93,15 +93,15 @@ const TodoListContainor = () =>{
 
     
     
+
+    // logigng out all todos if any,
     useEffect(() =>{
-        fetchTodos(setTodosList);
+        try {
+            fetchTodos(setTodosList)
+        } catch (error) {
+            console.warn(error)
+        }
     },[])
-
-    
-    
-
-    
-
   
    
     return(

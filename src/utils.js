@@ -1,8 +1,10 @@
-export const fetchTodos =  (setContxt,data=null) =>{
-    const response =  data ?  data : localStorage.getItem('todos');
-    const todos = JSON.parse(response);
-    setContxt(todos ? todos.reverse() : null);
+const fetchTodos =  (setContxt,data=null) =>{
+    const res = data ||  localStorage.getItem('todos');
+    if(res){
+        const todos = JSON.parse(res);
+        setContxt(todos ? todos.reverse() : null);
+    }
 }
 
 
-
+export default fetchTodos;

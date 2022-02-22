@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import {TodoContext} from "../context";
-import {fetchTodos} from "../utils";
+import fetchTodos from "../utils";
 
 // input-bar component
 const InputBar = () =>{
